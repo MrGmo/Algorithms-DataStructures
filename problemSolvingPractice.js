@@ -5,7 +5,26 @@
 
 
 
+// Find the unique number in the array using the frequency counter method.
 
+// function findOdd(arr){
+//   let numCount = {}
+//
+//   for(let i = 0; i < arr.length; i++){
+//     if(numCount[arr[i]]){
+//       numCount[arr[i]]++
+//     }else{
+//       numCount[arr[i]] = 1
+//     }
+//   }
+//   for(let num in numCount){
+//     if(numCount[num] === 1){
+//       return num
+//     }
+//   }
+// }
+//
+// console.log(findOdd([3,3,3,2,2,1,2]))
 
 
 
@@ -61,8 +80,7 @@
 //   return str1 === str2
 // }
 
-console.log(anagram('racecar', 'carrace'))
-
+// console.log(anagram('racecar', 'carrace'))
 
 
 // Frequency Counter Example 1
