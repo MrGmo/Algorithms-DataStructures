@@ -1,9 +1,27 @@
+// Sliding Window Approach
+// Write a function called max SubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
 
-
-
-
-
-
+// function subArraySum(arr, num){
+//   let maxSum = 0
+//   let tempSum = 0
+//
+//   if(num > arr.length){
+//     return null;
+//   }
+//
+//   for(let i = 0; i < num; i++){
+//     maxSum += arr[i]
+//   }
+//
+//   tempSum = maxSum
+//   for(let j = num; j < arr.length; j++){
+//     tempSum = tempSum - arr[j - num] + arr[j]
+//     maxSum = Math.max(maxSum, tempSum)
+//   }
+//     return maxSum
+// }
+//
+// console.log(subArraySum([1, 2, 5, 2, 8, 1, 4], 4))
 
 
 // Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
