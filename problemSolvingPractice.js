@@ -1,3 +1,41 @@
+// Bonus Challenges
+
+// Frequency counter
+// Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits.
+
+// function sameFrequency(num1, num2){
+//   let str1 = String(num1)
+//   let str2 = String(num2)
+//
+//   if(str1.length !== str2.length){
+//     return false
+//   }
+//
+//   let countNum1 = {};
+//   let countNum2 = {};
+//
+//   for(let i = 0; i < str1.length; i++){
+//     countNum1[str1[i]] = (countNum1[str1[i]] || 0) + 1
+//   }
+//
+//   for(let j = 0; j < str2.length; j++){
+//     countNum2[str2[j]] = (countNum2[str2[j]] || 0) + 1
+//   }
+//
+//   for(let key in countNum1){
+//     if(countNum1[key] !== countNum2[key]){
+//       return false
+//     }
+//     return true
+//   }
+// }
+//
+//
+// console.log(sameFrequency(331122, 112233))
+// should return true
+
+
+
 // Sliding Window Approach
 // Write a function called max SubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
 
