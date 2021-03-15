@@ -1,5 +1,12 @@
 // Bonus Challenges
 
+// Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates amaong the arguments passed in.
+
+// function areThereDuplicates() {
+//   return new Set(arguments).size !== arguments.length;
+// }
+
+
 // Frequency counter
 // Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits.
 
