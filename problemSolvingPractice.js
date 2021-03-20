@@ -1,4 +1,47 @@
 // Bonus Challenges
+
+//Write a function called isSubsequence which takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string. In other words, the function should check whether the characters in the first string appear somewhere in the second string, without their order changing.
+
+// Using a recursive solution
+// function isSubsequence(str1, str2){
+//   if(str1.length === 0){
+//     return true
+//   }
+//
+//   if(str2.length === 0){
+//     return false
+//   }
+//
+//   if(str2[0] === str1[0]) return isSubsequence(str1.slice(1), str2.slice(1))
+//    return isSubsequence(str1, str2.slice(1))
+// }
+//
+// console.log(isSubsequence('hello', 'hello world'))
+
+
+//Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average. There may be more than one pair that matches the average target.
+
+
+// function averagePair(arr, target){
+//     let start = 0
+//     let end = arr.length - 1
+//
+//     while(start < end){
+//       let avg = (arr[start] + arr[end]) / 2
+//       if(avg === target){
+//         return true
+//       }else if(avg < target){
+//         start++
+//       }else{
+//         end--
+//     }
+//   }
+//       return false
+// }
+//
+// console.log(averagePair([1, 2, 3], 2.5))
+
+
 // Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates amaong the arguments passed in.
 
 // function areThereDuplicates() {
