@@ -10,6 +10,25 @@
 
 
 
+// Recursive problem with negative numbers
+// function factorial(n) {
+//   if(n === 0 || n === 1){
+//     return 1
+//   }else if(n < 0){
+//     return n * factorial(n+1)
+//   }else{
+//     return n * factorial(n-1)
+//   }
+// }
+
+
+// Recursive factorial problem
+// function factorial(n) {
+//   if(n < 0) return null;
+//   if(n === 1 || n === 0) return 1;
+//   return factorial(n-1) * n
+// }
+
 
 // Sliding window
 // Write a function called findLongestSubstring, which accepts a string and returns the length fo the longest substring with all distinct characters.
