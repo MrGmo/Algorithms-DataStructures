@@ -1,6 +1,16 @@
 // Bonus Challenges
 
 
+
+
+
+
+
+
+
+
+
+
 // Sliding window
 // Write a function called findLongestSubstring, which accepts a string and returns the length fo the longest substring with all distinct characters.
 
@@ -173,7 +183,7 @@
 
 
 
-// Sliding Window Approach
+// Sliding window
 // Write a function called max SubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
 
 // function subArraySum(arr, num){
@@ -273,10 +283,8 @@
 // console.log(findOdd([3,3,3,2,2,1,2]))
 
 
-
 // Frequency Counter Example 2
 // Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another. Such as cinema, formed from iceman.
-
 
 
 // Solution 2: Solve using frequency counter method
