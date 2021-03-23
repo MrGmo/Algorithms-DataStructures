@@ -1,13 +1,39 @@
 // Bonus Challenges
 
+//Write a function called productOfArray which takes in an array of numbers and return the product of them all.
 
 
+// function productOfArray(arr){
+//   if(arr.length === 0){
+//     return 1
+//   }
+//     return productOfArray(arr.slice(1)) * arr[0]
+// }
+//
+// console.log(productOfArray([1, 2, 3, 10]))
 
 
+//Write a function factorial which accepts a number and returns the factorial of that number. A factorial is the product of an integer and all the integers below it; e.g., factorial four (4!) is equal to 24, because 4 * 3 * 2 * 1 equals 24. Factorial zero is always one.
 
 
+// function factorial(num){
+//   if(num === 0) return 1;
+//   return factorial(num-1) * num
+// }
+//
+//
+// console.log(factorial(5))
 
 
+//Write a function called power which accepts a base and an exponent. The function should return the power of the base to the exponent. This function should mimic the functionality of Math.pow(). Don't worry about negative bases or exponents.
+
+
+// function power(base, ex){
+//   if(ex === 0) return 1;
+//   return power(base, ex - 1) * base
+// }
+//
+// console.log(power(1, 3))
 
 
 // Recursive problem with negative numbers
