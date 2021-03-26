@@ -1,10 +1,32 @@
 // Bonus Challenges
 
 
+//Write a function called recursiveRange which accepts a number and adds up all the numbers from 0 to the number passed to the function.
+
+
+// function recursiveRange(num){
+//   let digit = 0
+//   let arr = []
+//   while(digit <= num){
+//     arr.push(digit)
+//     digit++
+//   }
+//   return arr.reduce((a, b) => a + b, 0)
+// }
+//
+// console.log(recursiveRange(6))
 
 
 
+//Write a function that takes in any number and returns the number that it is a factorial of. If the function receives 120, it should return '5!'.
 
+// function reverseFactorial(n) {
+//   let i = 1;
+//   while(n > 1) n /= ++i;
+//   return n === 1 ? i+'!' : 'None';
+// }
+//
+// console.log(reverseFactorial(120))
 
 
 //Write a function called productOfArray which takes in an array of numbers and return the product of them all.
