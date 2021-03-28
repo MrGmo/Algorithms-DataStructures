@@ -1,5 +1,16 @@
 // Bonus Challenges
 
+//Write a recursive function called reverse which accepts a string and returns a new string in reverse.
+
+// function reverse(str){
+//   if(str.length <= 1) return str;
+//   return reverse(str.slice(1)) + str[0]
+// }
+//
+// console.log(reverse('hello'))
+
+
+
 // Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and where every number thereafter is equal to the sum of the previous two numbers.
 
 
