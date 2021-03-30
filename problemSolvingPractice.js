@@ -1,5 +1,14 @@
 // Bonus Challenges
 
+// Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
+
+// function flatten(arr){
+//  let flat = [].concat(...arr)
+//  return flat.some(Array.isArray) ? flatten(flat) :  flat
+// }
+//
+// console.log(flatten([1,2,[[3, 3], 4]]))
+
 //Write a recursive function called someRecursive which accepts an array and a callback. The function returns true if a single value in the array returns true when passed to the callback. Otherwise it returns false.
 
 
