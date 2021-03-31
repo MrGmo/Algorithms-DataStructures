@@ -1,5 +1,29 @@
 // Bonus Challenges
 
+// function capitalizeWords (array) {
+//   if (array.length === 1) {
+//     return [array[0].toUpperCase()];
+//   }
+//   let res = capitalizeWords(array.slice(0, -1));
+//   res.push(array.slice(array.length-1)[0].toUpperCase());
+//   return res;
+// 
+// }
+// nestedEvenSum Solution
+//
+// function nestedEvenSum (obj, sum=0) {
+//     for (var key in obj) {
+//         if (typeof obj[key] === 'object'){
+//             sum += nestedEvenSum(obj[key]);
+//         } else if (typeof obj[key] === 'number' && obj[key] % 2 === 0){
+//             sum += obj[key];
+//         }
+//     }
+//     return sum;
+// }
+
+
+
 // Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
 
 // function flatten(arr){
