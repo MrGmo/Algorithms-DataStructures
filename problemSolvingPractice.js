@@ -1,5 +1,20 @@
 // Bonus Challenges
 
+// Searching Algorithms
+//Write a function called linearSearch which accepts an array and value, and returns the index at which the value exists. If the value does not exist in the array, return -1. Don't use indexOf to implement this function.
+
+// function linearSearch(arr, num){
+//   for(let i = 0; i < arr.length; i++){
+//     if(arr[i] === num){
+//       return i
+//     }
+//   }
+//   return -1
+// }
+//
+//
+// console.log(linearSearch([1, 2, 3, 4, 5], 4))
+
 
 //Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letter of each string in the array.
 
@@ -12,7 +27,7 @@
 //   res.push(string);
 //   return res;
 // }
-// 
+//
 // console.log(capitalizeFirst(['car', 'taco', 'blue']))
 
 // Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
