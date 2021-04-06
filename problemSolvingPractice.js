@@ -1,5 +1,21 @@
 // Bonus Challenges
 
+// function binarySearch(arr, num){
+//   let start = 0
+//   let end = arr.length-1
+//   let middle = Math.floor((start + end) / 2)
+//
+//   while(arr[middle] !== num && start <= end){
+//     if(num < arr[middle]) end = middle -1;
+//     else start = middle + 1;
+//     middle = Math.floor((start + end) / 2)
+//   }
+//   return arr[middle] === num ? middle : -1;
+// }
+//
+// console.log(binarySearch([2, 5, 6, 9, 13, 15, 28], 13))
+
+
 // Searching Algorithms
 //Write a function called linearSearch which accepts an array and value, and returns the index at which the value exists. If the value does not exist in the array, return -1. Don't use indexOf to implement this function.
 
