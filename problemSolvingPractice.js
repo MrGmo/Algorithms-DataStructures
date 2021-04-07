@@ -1,5 +1,21 @@
 // Bonus Challenges
 
+//Write a function that counts how many times a short string is included in a longer string. Return the count number.
+
+// function naiveSearch(long, short){
+//   let count = 0
+//   for(let i = 0; i < long.length; i++){
+//     for(let j = 0; j < short.length; j++){
+//       if(short[j] !== long[i+j]) break;
+//       if(j === short.length - 1) count++;
+//     }
+//   }
+//   return count
+// }
+//
+// console.log(naiveSearch('omgheyyouomgheyyouomg', 'omg'))
+
+
 // function binarySearch(arr, num){
 //   let start = 0
 //   let end = arr.length-1
