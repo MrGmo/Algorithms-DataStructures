@@ -35,9 +35,6 @@ function same(arr1, arr2){
     obj2[x] > 0 ? obj2[x]++ : obj2[x] = 1
   }
 
-  console.log(obj1)
-  console.log(obj2)
-
   for(let x in obj1){
     if(!(x**2 in obj2)){
       return false
