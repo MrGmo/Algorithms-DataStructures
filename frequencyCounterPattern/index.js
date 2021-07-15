@@ -18,7 +18,6 @@ function same(arr1, arr2){
 }
 
 
-
 // Solution 2 - Time: O(n)
 function same(arr1, arr2){
   if(arr1.length !== arr2.length){
@@ -46,13 +45,32 @@ function same(arr1, arr2){
   return true
 }
 
-console.log(same([1, 2, 3], [1, 4, 9]))
 
+// Solution 3 - Time: O(n)
+
+function same(a1, a2) {
+  if (a1.length !== a2.length) {
+    return false
+  }
+
+  let obj = {}
+
+  for (let num of a2) {
+    obj[num] > 0 ? obj[num]++ : obj[num] = 1
+  }
+
+  for (let num of a1) {
+    obj[num**2] > 0 ? obj[num**2] += -1 : null
+  }
+
+  return Object.values(obj).reduce((a,b) => a+b,0) === 0
+}
 
 
 // Frequency Counter Example 2
 // Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another. Such as cinema, formed from iceman.
 
+// Solution 1 - Time: O(n)
 
 function validAnagram(str1, str2){
   if(str1.length !== str2.length){
@@ -73,4 +91,24 @@ function validAnagram(str1, str2){
   return true
 } 
 
-console.log(validAnagram('racecar', 'carrace'))
+
+// Solution 2 - Time: O(n)
+
+function validAnagram(s1, s2) {
+  if (s1.length !== s2.length) {
+    return false
+  }
+
+  let obj = {}
+
+  for (let char of s1) {
+    obj[char] > 0 ? obj[char]++ : obj[char] = 1
+  }
+
+  for (let char of s2) {
+    obj[char] > 0 ? obj[char] += -1 : null
+  }
+
+  let sum = Object.values(obj).reduce((a, b) => a+b, 0)
+  return sum === 0
+}
