@@ -112,3 +112,42 @@ function validAnagram(s1, s2) {
   let sum = Object.values(obj).reduce((a, b) => a+b, 0)
   return sum === 0
 }
+
+// Frequency Counter Example 3
+// Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits.
+
+// Solution 1 - Time: O(n)
+
+function sameFrequency(n1, n2) {
+  n1 = n1.toString()
+  n2 = n2.toString()
+
+  if (n1.length !== n2.length) {
+    return false
+  }
+
+  let obj = {}
+
+  for (let char of n1) {
+    obj[char] > 0 ? obj[char]++ : obj[char] = 1
+  }
+
+  for (let char of n2) {
+    obj[char] > 0 ? obj[char]-- : obj[char] = 1
+  }
+
+  let sum = Object.values(obj).reduce((a,b)=> a+b, 0)
+  return sum === 0
+}
+
+// Frequency Counter Example 4
+// Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in. You can solve this using the frequency counter pattern OR the multiple pointers pattern.
+
+function areThereDuplicates(...args) {
+  let obj = {}
+
+  for (let char of args) {
+    obj[char] > 0 ? obj[char]++ : obj[char] = 1
+  }
+  return Math.max(...Object.values(obj)) > 1
+}
