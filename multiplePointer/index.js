@@ -1,3 +1,4 @@
+// Multiple pointers problem Example 1
 // Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
 
 // Solution 1 - Time: O(n^2)
@@ -32,6 +33,7 @@ function sumZero(arr) {
 }
 
 
+// Multiple pointers problem Example 2
 // Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
 
 // Solution 1 - Time: O(n)
@@ -51,8 +53,43 @@ function countUniqueValues(arr) {
 }
 
 
+// Multiple pointers problem Example 3
+//Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average. There may be more than one pair that matches the average target.
+
+// Solution 1 - Time: O(n), Space: O(1)
+
+function averagePair(arr, target) {
+  let left = 0
+  let right = arr.length-1
+
+  while (left < right) {
+    let avg = (arr[left] + arr[right])/2
+    if (avg === target) {
+      return true
+    }
+    if (avg > target) {
+      right--
+    }
+    if (avg < target) {
+      left++
+    }
+  }
+  return false
+}
+
+// Multiple pointers problem Example 4
 //Write a function called isSubsequence which takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string. In other words, the function should check whether the characters in the first string appear somewhere in the second string, without their order changing.
 
+// Solution 1 - Time: O(n), Space: O(1)
 
-
-//Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average. There may be more than one pair that matches the average target.
+function isSubsequence(str1, str2) {
+  let i = 0;
+  let j = 0;
+  if (!str1) return true;
+  while (j < str2.length) {
+    if (str2[j] === str1[i]) i++;
+    if (i === str1.length) return true;
+    j++;
+  }
+  return false;
+}
