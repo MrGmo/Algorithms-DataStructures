@@ -9,3 +9,18 @@ function power(base, exp){
   }
   return power(base, exp-1) * base
 }
+
+// Recursion Example 2
+// Write a function factorial which accepts a number and returns the factorial of that number. A factorial is the product of an integer and all the integers below it.
+
+Solution 1
+
+function factorial(num) {
+  if (num < 0) {
+      return 0
+  }
+  if (num <= 1) {
+    return 1
+  }
+  return factorial(num-1) * num
+}
