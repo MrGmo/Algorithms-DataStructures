@@ -24,3 +24,15 @@ function factorial(num) {
   }
   return factorial(num-1) * num
 }
+
+// Recursion Example 3
+//Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
+
+// Solution 1
+
+function productOfArray(arr) {
+  if (arr.length === 0) {
+      return 1
+  }
+  return productOfArray(arr.slice(1)) * arr[0]
+}
