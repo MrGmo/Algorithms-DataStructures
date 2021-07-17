@@ -83,3 +83,107 @@ function reverse(str) {
 
 // Solution 1
 
+function isPalindrome(str) {
+  if (str.length === 1) {
+    return true
+  }
+
+  if (str.length === 2) {
+    return str[0] === str[1]
+  }
+
+  if (str[0] === str.slice(-1)) {
+    return isPalindrome(str.slice(1,-1))
+  }
+  return false
+}
+
+
+// Challenge Recursion Problem 3
+//Write a recursive function called someRecursive which accepts an array and a callback. The function returns true if a single value in the array returns true when passed to the callback. Otherwise it returns false.
+
+// Solution 1
+
+function someRecursive(arr, callback){
+  if (arr.length === 0) {
+    return false
+  }
+
+  if (callback(arr[0])) {
+    return true
+  }
+  return someRecursive(arr.slice(1), callback)
+}
+
+
+// Challenge Recursion Problem 4
+//Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened. 
+
+// Solution 1
+
+function flatten(oldArr){
+  var newArr = []
+  	for(var i = 0; i < oldArr.length; i++){
+    	if(Array.isArray(oldArr[i])){
+      		newArr = newArr.concat(flatten(oldArr[i]))
+    	} else {
+      		newArr.push(oldArr[i])
+    	}
+  }
+  return newArr;
+}
+
+
+// Challenge Recursion Problem 5
+//Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letter of each string in the array.
+
+// Solution 1
+
+function capitalizeFirst(array) {
+  if (array.length === 1) {
+    return [array[0][0].toUpperCase()+array[0].substring(1)];
+  }
+  let res = capitalizeFirst(array.slice(0, -1));
+  res.push(array.slice(array.length-1)[0][0].toUpperCase()+array[array.length-1].substring(1));
+  return res;
+}
+
+
+// Challenge Recursion Problem 6
+//Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an object which may contain nested objects. 
+
+// Solution 1
+
+function nestedEvenSum(obj) {
+  let sum = 0
+  for (let key in obj) {
+      if (typeof obj[key] === 'object'){
+          sum += nestedEvenSum(obj[key]);
+      } else if (typeof obj[key] === 'number' && obj[key] % 2 === 0){
+          sum += obj[key];
+      }
+  }
+  return sum;
+}
+
+
+// Challenge Recursion Problem 7
+//Write a recursive function called capitalizeWords. Given an array of words, return a new array containing each word capitalized.
+
+// Solution 1
+
+function capitalizeWords(array) {
+  if (array.length === 1) {
+    return [array[0].toUpperCase()];
+  }
+  let res = capitalizeWords(array.slice(0, -1));
+  res.push(array.slice(array.length-1)[0].toUpperCase());
+  return res;
+}
+
+
+// Challenge Recursion Problem 8
+//Write a function called stringifyNumbers which takes in an object and finds all of the values which are numbers and converts them to strings. Recursion would be a great way to solve this.
+
+// Solution 1
+
