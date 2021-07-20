@@ -1,7 +1,7 @@
 //Merge Sort Example 1
-//Write a function that takes in an array and sorts it smallest to largest using merge sort.
+//Write a function that takes in a pair of array's and sorts them into one larger array.
 
-// Solution 1 - Time: O(n^2)
+// Solution 1 - Time: O(n log(n)), Space: O(n)
 
 function merge(arr1, arr2){
   let results = [];
