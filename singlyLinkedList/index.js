@@ -61,13 +61,70 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = newNode
       this.tail = this.head
-    }
+    } else {
     newNode.next = this.head
     this.head = newNode
+    }
     this.length++
     return list
   }
+  get(index) {
+    if (index < 0 || index >= this.length) {
+      return null
+    }
+    let counter = 0
+    let current = this.head
+    while (counter !== index) {
+      current = current.next
+      counter++
+    }
+    return current
+  }
+  set(index,val) {
+    let foundNode = this.get(index)
+    if (foundNode) {
+      foundNode.val = val
+      return true
+    }
+    return false
+  }
+  insert(index,val) {
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) return !!this.push(val);
+    if (index === 0) return !!this.unshift(val);
+    let newNode = new Node(val)
+    let prev = this.get(index-1)
+    let temp = prev.next
+    prev.next = newNode
+    newNode.next = temp
+    this.length++
+    return true
+  }
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0) return this.shift();
+    if (index === this.length-1) return this.pop();
+    let previousNode = this.get(index-1)
+    let removed = previousNode.next
+    previousNode.next = removed.net
+    this.length--
+    return removed
+  }
+  reverse() {
+    let node = this.head
+    this.head = this.tail
+    this.tail = node
+    let next =  null
+    let prev = null
 
+    for (let i = 0; i < this.length; i++) {
+      next = node.next
+      node.next = prev
+      prev = node
+      node = next
+    }
+    return this
+  }
 }
 
 let list = new SinglyLinkedList()
