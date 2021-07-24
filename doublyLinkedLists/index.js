@@ -8,7 +8,7 @@ class Node {
   }
 }
 
-class DoublyLinkedList() {
+class DoublyLinkedList {
   constructor() {
     this.head = null
     this.tail = null
@@ -34,7 +34,7 @@ class DoublyLinkedList() {
       this.head = null
       this.tail = null
     } else {
-      this.tail = popppedNode.prev
+      // this.tail = popppedNode.prev
       this.tail.next = null
       poppedNode.prev = null
     }
@@ -77,6 +77,7 @@ class DoublyLinkedList() {
         current = current.next
         count++
       }
+      return current
     } else {
       let count = this.length-1
       let current = this.tail
@@ -84,11 +85,11 @@ class DoublyLinkedList() {
         current = current.prev
         count--
       }
+      return current
     }
-    return current
   }
   set(index,val) {
-    //set is much easier if you already have a get method, FYI 
+    //set is much easier if you already have a get method, FYI
     let foundNode = this.get(index)
     if (foundNode !== null) {
       foundNode.val = val
